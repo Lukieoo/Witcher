@@ -113,6 +113,7 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + Environment.getExternalStorageDirectory() + "/fuck.mp3"));
             intent.setType("audio/*");
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             mContext.startActivity(Intent.createChooser(intent, "Share sound"));
 
         });
