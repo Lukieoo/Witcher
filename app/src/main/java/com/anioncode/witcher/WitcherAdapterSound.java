@@ -61,7 +61,17 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
 
         mp = TaskMedia(modelWitcher.NameFile);
         mp.setLooping(false);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+
+                holder.playStop.setImageResource(R.drawable.ic_play_arrow);
+
+            }
+
+        });
         mp.seekTo(0);
         mp.setVolume(0.5f, 0.5f);
         totalTime = mp.getDuration();
@@ -78,7 +88,32 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
                 holder.playStop.setImageResource(R.drawable.ic_play_arrow);
             }
         });
+        String file;
+        switch (modelWitcher.NameFile) {
+            case "raw1": {
+                file = "toss_a_coin.mp3";
+                break;
+            }
 
+            case "raw2": {
+                file = "geraltwishes.mp3";
+                break;
+            }
+
+            case "raw3": {
+                file = "fuck.mp3";
+                break;
+            }
+
+            case "raw4": {
+                file = "hmm.mp3";
+                break;
+            }
+            default: {
+                file = "love.mp3";
+            }
+
+        }
         holder.messageSend.setOnClickListener((View c) -> {
             //String mediaPath = copyFiletoExternalStorage(R.raw.toss_a_coin, "toss_a_coin.mp3");
             //  String mediaPath = "android.resource://com.anioncode.witcher/raw/" + R.raw.toss_a_coin;
@@ -94,9 +129,36 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
             /// solution
             InputStream inputStream;
             FileOutputStream fileOutputStream;
+
             try {
-                inputStream = mContext.getResources().openRawResource(R.raw.toss_a_coin);
-                fileOutputStream = new FileOutputStream(new File(Environment.getExternalStorageDirectory(), "fuck.mp3"));
+                switch (modelWitcher.NameFile) {
+                    case "raw1": {
+                        inputStream = mContext.getResources().openRawResource(R.raw.toss_a_coin);
+                        break;
+                    }
+
+                    case "raw2": {
+                        inputStream = mContext.getResources().openRawResource(R.raw.geraltwishes);
+                        break;
+                    }
+
+                    case "raw3": {
+                        inputStream = mContext.getResources().openRawResource(R.raw.fuck);
+                        break;
+                    }
+
+                    case "raw4": {
+                        inputStream = mContext.getResources().openRawResource(R.raw.hmm);
+                        break;
+                    }
+                    default: {
+                        inputStream = mContext.getResources().openRawResource(R.raw.toss_a_coin);
+                    }
+
+                }
+
+
+                fileOutputStream = new FileOutputStream(new File(Environment.getExternalStorageDirectory(), file));
 
                 byte[] buffer = new byte[1024];
                 int length;
@@ -111,7 +173,7 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
             }
 
             Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + Environment.getExternalStorageDirectory() + "/fuck.mp3"));
+            intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + Environment.getExternalStorageDirectory() + "/" + file));
             intent.setType("audio/*");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             mContext.startActivity(Intent.createChooser(intent, "Share sound"));
