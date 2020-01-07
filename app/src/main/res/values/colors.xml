@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#ffffff</color>
 
-    <color name="BlackBQ">#000000</color>
+    <color name="BlackBQ">#111111</color>
+    <color name="BluesBQ">#171820</color>
     <color name="WhiteText">#ffffff</color>
 </resources>

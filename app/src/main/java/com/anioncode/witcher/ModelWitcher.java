@@ -1,20 +1,20 @@
 package com.anioncode.witcher;
 
 public class ModelWitcher {
-    String Title;
+    String imageFlag;
     String NameFile;
 
-    public ModelWitcher(String title, String nameFile) {
-        Title = title;
+    public ModelWitcher(String imageFlag, String nameFile) {
+        this.imageFlag = imageFlag;
         NameFile = nameFile;
     }
 
-    public String getTitle() {
-        return Title;
+    public String getImageFlag() {
+        return imageFlag;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public void setImageFlag(String imageFlag) {
+        this.imageFlag = imageFlag;
     }
 
     public String getNameFile() {

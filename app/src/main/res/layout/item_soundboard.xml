@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/BlackBQ"
+    android:layout_height="100dp"
+    android:background="@drawable/coloropacity"
     android:orientation="vertical"
     android:weightSum="10">
-    <TextView
+<!--    <TextView-->
+<!--        android:layout_gravity="center"-->
+<!--        android:id="@+id/titleText"-->
+<!--        android:ellipsize="marquee"-->
+<!--        android:fadingEdge="horizontal"-->
+<!--        android:marqueeRepeatLimit="marquee_forever"-->
+<!--        android:scrollHorizontally="true"-->
+<!--        android:textAlignment="center"-->
+<!--       android:layout_marginTop="5dp"-->
+<!--        android:textSize="12sp"-->
+<!--        android:text="Grosza daj Wiedźminowi Obrońcy ludzkości lala lalala lala"-->
+<!--        android:textColor="@color/WhiteText"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"/>-->
+    <ImageView
+        android:id="@+id/titleimage"
+        android:src="@drawable/poland"
         android:layout_gravity="center"
-        android:id="@+id/titleText"
-        android:ellipsize="marquee"
-        android:fadingEdge="horizontal"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:textAlignment="center"
-       android:layout_marginTop="5dp"
-        android:textSize="12sp"
-        android:text="Grosza daj Wiedźminowi Obrońcy ludzkości lala lalala lala"
-        android:textColor="@color/WhiteText"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"/>
-
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/BlackBQ"
         android:orientation="horizontal"
         android:weightSum="10">
 
