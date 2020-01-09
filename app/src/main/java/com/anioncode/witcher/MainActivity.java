@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.Settings;
@@ -22,6 +23,7 @@ import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -38,25 +40,30 @@ public class MainActivity extends AppCompatActivity {
     private HorizontalScrollView webInitialization;
     private WitcherAdapterSound mAdapter;
     private FloatingActionButton titleText;
-
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
         setContentView(R.layout.activity_main);
         Window w = getWindow();
-
+        MobileAds.initialize(this, "ca-app-pub-3788232558823244~4608224389");
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-        AdView adView = new AdView(this);
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId("ca-app-pub-3788232558823244/4626845185");
+        mAdView =  findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+//        AdView adView = new AdView(this);
+//        adView.setAdSize(AdSize.BANNER);
+//        adView.setAdUnitId("ca-app-pub-3788232558823244/4626845185");
 
 
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -72,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             dialog.setContentView(R.layout.webdialog);
 
             WebView webView = (WebView) dialog.findViewById(R.id.WebView);
-            webView.loadUrl("file:///android_asset/index.html");
+            webView.loadUrl("https://docs.google.com/forms/d/1TslC4_CKUF1oFm-QFJuEDyQWJgr-tfY46c8qYmfL5Vk/prefill");
             WebSettings webSettings = webView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             webSettings.setSupportZoom(true);

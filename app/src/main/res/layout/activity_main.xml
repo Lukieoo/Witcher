@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BlackBQ"
+    android:background="@color/WhiteText"
 
     tools:context=".MainActivity">
 
@@ -20,13 +20,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:contentScrim="@color/BlackBQ"
+            app:contentScrim="@da/BlackBQ"
             app:expandedTitleMarginStart="48dp"
            >
             <ImageView
                 android:id="@+id/main.imageview.placeholder"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="220dp"
 
                 android:adjustViewBounds="true"
                 android:scaleType="center"
@@ -49,18 +49,19 @@
 <!--    android:adjustViewBounds="true"-->
 
     <RelativeLayout
+        android:background="@drawable/bq"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
 
         android:layout_height="match_parent">
         <TextView
-            android:elevation="10dp"
+            android:elevation="12dp"
             android:text="Vote"
             android:layout_alignEnd="@+id/fabbtn"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="45dp"
             android:fontFamily="@font/frozito"
-            android:textColor="@color/WhiteText"
+            android:textColor="@color/BlackBQ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -88,7 +89,7 @@
             android:fontFamily="@font/frozito"
             android:text="@string/country"
             android:textColor="@color/BlackBQ"
-            android:textFontWeight="800"
+            android:textFontWeight="500"
             android:textSize="25sp" />
 
         <View
@@ -134,12 +135,13 @@
 
                     </androidx.cardview.widget.CardView>
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:text="Polish"
                         android:textFontWeight="400"
                         android:textAlignment="center"
@@ -171,12 +173,13 @@
 
                     </androidx.cardview.widget.CardView>
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:text="German"
                         android:textFontWeight="400"
                         android:textAlignment="center"
@@ -208,12 +211,13 @@
 
                     </androidx.cardview.widget.CardView>
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:singleLine="true"
                         android:text="English"
                         android:textFontWeight="400"
@@ -245,12 +249,13 @@
 
                     </androidx.cardview.widget.CardView>
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:singleLine="true"
                         android:text="Spanish"
                         android:textFontWeight="400"
@@ -283,12 +288,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:singleLine="true"
                         android:text="Russian"
                         android:textFontWeight="400"
@@ -321,12 +327,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:singleLine="true"
                         android:text="Japanese"
                         android:textFontWeight="400"
@@ -359,12 +366,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:fontFamily="@font/frozito"
                         android:textIsSelectable="true"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/WhiteText"
+                        android:textColor="@color/BluesBQ"
                         android:singleLine="true"
                         android:text="French"
                         android:textFontWeight="400"
@@ -381,6 +389,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
             android:layout_below="@id/horizontalScrollView1"
+            android:layout_marginBottom="15dp"
             android:background="@color/WhiteText" />
         <com.google.android.gms.ads.AdView
             android:layout_below="@id/line1"
@@ -391,12 +400,7 @@
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-3788232558823244/4626845185">
         </com.google.android.gms.ads.AdView>
-        <ImageView
-            android:adjustViewBounds="true"
-            android:src="@drawable/jasksong"
-            android:layout_below="@id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
         <ImageView
 
             android:layout_alignParentBottom="true"
@@ -411,7 +415,9 @@
             android:layout_below="@id/adView"
             android:layout_width="match_parent"
             android:layout_marginBottom="50dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            />
 
     </RelativeLayout>
 
