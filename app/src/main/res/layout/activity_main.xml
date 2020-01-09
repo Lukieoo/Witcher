@@ -30,7 +30,7 @@
 
                 android:adjustViewBounds="true"
                 android:scaleType="center"
-                android:background="@drawable/witcher02"
+                android:background="@drawable/witcher04"
                 android:tint="#11000000"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.9"
@@ -49,7 +49,7 @@
 <!--    android:adjustViewBounds="true"-->
 
     <RelativeLayout
-        android:background="@drawable/bq"
+        android:background="@drawable/woodbq"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
 
@@ -59,9 +59,9 @@
             android:text="Vote"
             android:layout_alignEnd="@+id/fabbtn"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="65dp"
             android:fontFamily="@font/frozito"
-            android:textColor="@color/BlackBQ"
+            android:textColor="@color/WhiteText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -77,20 +77,21 @@
             app:fabSize="mini"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <TextView
-            android:gravity="center"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:background="@drawable/bqshape"
+            android:layout_margin="15dp"
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:layout_margin="15dp"
+            android:background="@drawable/title"
             android:fontFamily="@font/frozito"
+            android:gravity="center"
+            android:padding="10dp"
             android:text="@string/country"
-            android:textColor="@color/BlackBQ"
+            android:textAlignment="center"
+            android:textColor="@color/WhiteText"
             android:textFontWeight="500"
-            android:textSize="25sp" />
+            android:textSize="35sp" />
 
         <View
             android:id="@+id/line"
@@ -113,12 +114,12 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -141,7 +142,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:text="Polish"
                         android:textFontWeight="400"
                         android:textAlignment="center"
@@ -151,12 +152,12 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -179,7 +180,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:text="German"
                         android:textFontWeight="400"
                         android:textAlignment="center"
@@ -189,12 +190,12 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -217,7 +218,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:singleLine="true"
                         android:text="English"
                         android:textFontWeight="400"
@@ -227,12 +228,12 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -255,7 +256,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:singleLine="true"
                         android:text="Spanish"
                         android:textFontWeight="400"
@@ -265,12 +266,12 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -294,7 +295,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:singleLine="true"
                         android:text="Russian"
                         android:textFontWeight="400"
@@ -304,12 +305,12 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -333,7 +334,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:singleLine="true"
                         android:text="Japanese"
                         android:textFontWeight="400"
@@ -343,12 +344,12 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
@@ -372,7 +373,7 @@
                         android:fadingEdge="horizontal"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:scrollHorizontally="true"
-                        android:textColor="@color/BluesBQ"
+                        android:textColor="@color/WhiteText"
                         android:singleLine="true"
                         android:text="French"
                         android:textFontWeight="400"
@@ -408,17 +409,25 @@
             android:layout_width="250dp"
             android:layout_height="250dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-
-            android:id="@+id/item_sound"
-
+        <RelativeLayout
+            android:background="@drawable/poem"
+            android:padding="15dp"
             android:layout_below="@id/adView"
             android:layout_width="match_parent"
-            android:layout_marginBottom="50dp"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            />
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/item_sound"
 
-    </RelativeLayout>
+
+                android:layout_width="match_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                />
+
+        </RelativeLayout>
+        </RelativeLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
