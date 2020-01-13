@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             dialog.setContentView(R.layout.webdialog);
 
             WebView webView = (WebView) dialog.findViewById(R.id.WebView);
-            webView.loadUrl("https://docs.google.com/forms/d/1TslC4_CKUF1oFm-QFJuEDyQWJgr-tfY46c8qYmfL5Vk/prefill");
+            webView.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLSeqLz1la-ruS30qZXyLBcb2_wpAZsaoq8CdxFZa9RrI4PHhww/viewform?usp=sf_link");
             WebSettings webSettings = webView.getSettings();
             webSettings.setJavaScriptEnabled(true);
             webSettings.setSupportZoom(true);
