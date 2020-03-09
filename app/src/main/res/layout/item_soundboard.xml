@@ -37,13 +37,14 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_gravity="center"
-
+                android:layout_marginStart="5dp"
                 android:layout_weight="1"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="4dp">
 
             <ImageView
+
                 android:id="@+id/titleimage"
                 android:layout_width="25dp"
                 android:layout_height="25dp"

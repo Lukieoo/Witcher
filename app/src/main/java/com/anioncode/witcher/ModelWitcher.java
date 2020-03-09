@@ -3,10 +3,20 @@ package com.anioncode.witcher;
 public class ModelWitcher {
     String imageFlag;
     String NameFile;
+    boolean isClicked;
 
-    public ModelWitcher(String imageFlag, String nameFile) {
+    public ModelWitcher(String imageFlag, String nameFile, boolean isClicked) {
         this.imageFlag = imageFlag;
         NameFile = nameFile;
+        this.isClicked = isClicked;
+    }
+
+    public boolean isClicked() {
+        return isClicked;
+    }
+
+    public void setClicked(boolean clicked) {
+        isClicked = clicked;
     }
 
     public String getImageFlag() {

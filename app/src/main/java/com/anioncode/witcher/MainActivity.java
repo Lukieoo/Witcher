@@ -95,17 +95,21 @@ public class MainActivity extends AppCompatActivity {
 
         });
         ArrayList<ModelWitcher> myDataset = new ArrayList<>();
-        myDataset.add(new ModelWitcher("Poland", "raw1"));
-        myDataset.add(new ModelWitcher("german", "raw2"));
-        myDataset.add(new ModelWitcher("English", "raw3"));
-        myDataset.add(new ModelWitcher("Spanish", "raw4"));
-        myDataset.add(new ModelWitcher("Russian", "raw5"));
-        myDataset.add(new ModelWitcher("Japan", "raw6"));
-        myDataset.add(new ModelWitcher("France", "raw7"));
+        myDataset.add(new ModelWitcher("Poland", "raw1",false));
+        myDataset.add(new ModelWitcher("german", "raw2",false));
+        myDataset.add(new ModelWitcher("English", "raw3",false));
+        myDataset.add(new ModelWitcher("Spanish", "raw4",false));
+        myDataset.add(new ModelWitcher("Russian", "raw5",false));
+        myDataset.add(new ModelWitcher("Japan", "raw6",false));
+        myDataset.add(new ModelWitcher("France", "raw7",false));
+       // myDataset.add(new ModelWitcher("Hindi", "raw8",false));
+       // myDataset.add(new ModelWitcher("Italian", "raw9",false));
+       // myDataset.add(new ModelWitcher("Czech", "raw10",false));
 
 
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
+     //   layoutManager.onSaveInstanceState();
         recyclerView.setLayoutManager(layoutManager);
 //
 //        // specify an adapter (see also next example)

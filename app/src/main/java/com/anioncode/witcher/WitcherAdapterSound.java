@@ -62,6 +62,7 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
 
         mp = TaskMedia(modelWitcher.NameFile);
         mp.setLooping(false);
+
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
             @Override
@@ -77,18 +78,22 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
         mp.setVolume(0.5f, 0.5f);
         totalTime = mp.getDuration();
 
-        holder.playStop.setOnClickListener((View v) -> {
-            if (!mp.isPlaying()) {
-                // Stopping
-                mp.start();
-                holder.playStop.setImageResource(R.drawable.ic_stop);
 
-            } else {
-                // Playing
-                mp.pause();
-                holder.playStop.setImageResource(R.drawable.ic_play_arrow);
-            }
-        });
+            holder.playStop.setOnClickListener((View v) -> {
+
+                if (!mp.isPlaying()) {
+                    // Stopping
+                    mp.start();
+                    holder.playStop.setImageResource(R.drawable.ic_stop);
+
+                } else {
+                    // Playing
+                    mp.pause();
+                    holder.playStop.setImageResource(R.drawable.ic_play_arrow);
+                }
+            });
+
+
         String file;
         switch (modelWitcher.NameFile) {
             case "raw1": {
@@ -129,6 +134,22 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
                 holder.titleimage.setImageResource(R.drawable.france);
                 break;
             }
+//            case "raw8": {
+//                file = "hindi.mp3";
+//                holder.titleimage.setImageResource(R.drawable.hindi);
+//                break;
+//            }
+//            case "raw9": {
+//                file = "italian.mp3";
+//                holder.titleimage.setImageResource(R.drawable.italy);
+//                break;
+//            }
+//            case "raw10": {
+//                file = "czech.mp3";
+//                holder.titleimage.setImageResource(R.drawable.czech);
+//                break;
+//            }
+
             default: {
                 file = "toss_a_coin.mp3";
             }
@@ -183,6 +204,18 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
                         inputStream = mContext.getResources().openRawResource(R.raw.french);
                         break;
                     }
+//                    case "raw8": {
+//                        inputStream = mContext.getResources().openRawResource(R.raw.hindi);
+//                        break;
+//                    }
+//                    case "raw9": {
+//                        inputStream = mContext.getResources().openRawResource(R.raw.italian);
+//                        break;
+//                    }
+//                    case "raw10": {
+//                        inputStream = mContext.getResources().openRawResource(R.raw.czech);
+//                        break;
+//                    }
                     default: {
                         inputStream = mContext.getResources().openRawResource(R.raw.toss_a_coin);
                     }
@@ -249,6 +282,8 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
         }).start();
     }
 
+
+
     @Override
     public int getItemCount() {
         return list == null ? 0 : list.size();
@@ -262,6 +297,7 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
 
         public RecViewHolder(View itemView) {
             super(itemView);
+
             playStop = itemView.findViewById(R.id.playStop);
             titleimage = itemView.findViewById(R.id.titleimage);
             soundProgress = itemView.findViewById(R.id.seekBar);
@@ -307,7 +343,18 @@ public class WitcherAdapterSound extends RecyclerView.Adapter<WitcherAdapterSoun
                 mp = MediaPlayer.create(mContext, R.raw.french);
                 break;
             }
-
+//            case "raw8": {
+//                mp = MediaPlayer.create(mContext, R.raw.hindi);
+//                break;
+//            }
+//            case "raw9": {
+//                mp = MediaPlayer.create(mContext, R.raw.italian);
+//                break;
+//            }
+//            case "raw10": {
+//                mp = MediaPlayer.create(mContext, R.raw.czech);
+//                break;
+//            }
             default: {
                 mp = MediaPlayer.create(mContext, R.raw.toss_a_coin);
             }

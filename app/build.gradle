@@ -7,8 +7,8 @@ android {
         applicationId "com.anioncode.witcher"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 6
-        versionName "1.5"
+        versionCode 8
+        versionName "1.7"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
