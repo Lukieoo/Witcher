@@ -5,4 +5,4 @@ https://play.google.com/store/apps/details?id=com.anioncode.witcher
 
 New design
 
-<a href="https://ibb.co/j6dpKcn"><img src="https://i.ibb.co/TvZCXV9/unnamed.png" alt="unnamed" border="0"></a>
+ <a href="https://ibb.co/3yVPmMh"><img src="https://i.ibb.co/kgzP29c/image4609-2s-4-0.png" alt="image4609-2s-4-0" border="0"></a>
